@@ -3,7 +3,7 @@
 
 # Project Description
 
-![GitHub Logo](/Tree.jpeg)
+![GitHub Logo](/Tree.jpeg=100x20)
 
 
 This repository contains the UBC [STAT 545](https://stat545.stat.ubc.ca/) mini data analysis for [Fanny Dupont](https://github.com/Fanny-Dupont). 
