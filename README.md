@@ -1,4 +1,4 @@
-# mda-project-template
+# Mini Data Analysis Project Fanny Dupont
 
 
 # Project Description
