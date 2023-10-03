@@ -1,4 +1,4 @@
-# Mini Data Analysis Project Fanny Dupont
+# Mini Data Analysis - Fanny Dupont
 
 
 # Project Description
