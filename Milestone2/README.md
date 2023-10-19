@@ -6,7 +6,7 @@ This repository contains the UBC [STAT 545](https://stat545.stat.ubc.ca/) mini d
 ## File description
 
 The [README.md](./README.md/) file includes a description of the project.
-The [milestone2.Rmd](./Milestone2/milestone2.Rmd) file and its markdown format. The code explores the dataset **vancouver_trees** and can be previewed through Github. The additionnal [output](./output) file contains the summary table that I made from Task 1 (Age variable per area) and the estimates obtained after fitting a linear model to the age of trees.
+The [milestone2.Rmd](./Milestone2/milestone2.Rmd) file and its markdown format, provide my code. The code explores the dataset **vancouver_trees** and can be previewed through Github. The additional [output](./output) file contains the summary table that I made from Task 1 (Age variable per area) and the estimates obtained after fitting a linear model to the age of trees.
 
 During the analysis, I go through **4** Tasks, to answer the following questions:
 
