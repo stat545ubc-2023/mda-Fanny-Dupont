@@ -438,11 +438,11 @@ pick 8, and explain whether the data is untidy or tidy.
 ``` r
 # Assuming "vancouver_trees" is your data frame
 for (col in colnames(vancouver_trees)) {
-  print(paste("Column:", col))
+  #print(paste("Column:", col))
   
   # Check the class of the column
   class_check <- class(vancouver_trees %>% pull({{col}}))
-  print(paste("Class:", class_check))
+  #print(paste("Class:", class_check))
   
   # Check if there are unique values for each observation
   unique_check <- vancouver_trees %>%
@@ -450,129 +450,17 @@ for (col in colnames(vancouver_trees)) {
     summarize(count = n()) %>%
     filter(count > 1) %>%
     nrow()
-  print(paste("Unique Check:", unique_check))
+  #print(paste("Unique Check:", unique_check))
   
   # Check for missing values (NA)
   na_check <- vancouver_trees %>% 
     summarize(na_count = sum(is.na({{col}}))) %>%
     pull(na_count)
-  print(paste("NA Check:", na_check))
+  #print(paste("NA Check:", na_check))
   
-  cat("\n")
+  #cat("\n")
 }
-```
 
-    ## [1] "Column: tree_id"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: civic_number"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: std_street"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: genus_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: species_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: cultivar_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: common_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: assigned"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: root_barrier"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: plant_area"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: on_street_block"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: on_street"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: neighbourhood_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: street_side_name"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: height_range_id"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: diameter"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: curb"
-    ## [1] "Class: character"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: date_planted"
-    ## [1] "Class: Date"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: longitude"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: latitude"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: Area"
-    ## [1] "Class: factor"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-    ## 
-    ## [1] "Column: Age"
-    ## [1] "Class: numeric"
-    ## [1] "Unique Check: 1"
-    ## [1] "NA Check: 0"
-
-``` r
 #Look at plant_area for duplicates
 unique(vancouver_trees$plant_area) # a lot of duplicates, e.g., "N" and "n".
 ```
@@ -592,6 +480,9 @@ vancouver_trees <- vancouver_trees %>%
 #Look at species for duplicate
 # unique(vancouver_trees$species_name) #no duplicate. I comment it to not take too much space in in the .md file.
 ```
+
+I commented the `print` function to get a better looking output in the
+.md document.
 
 I identified some duplicates and removed them. Each row is now an
 **observation**, each column a different **variable**, each cell a
