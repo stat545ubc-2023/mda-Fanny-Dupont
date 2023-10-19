@@ -326,6 +326,7 @@ If your data is untidy, then tidy it! Then, untidy it back to it's original stat
 Be sure to explain your reasoning for this task. Show us the "before" and "after".
 
 <!--------------------------- Start your work below --------------------------->
+The idea is to add three columns, one for each category of age as the "untidyness" and then put it all back together.
 ```{r untidy and tidy back}
 #I will use the pivot_longer function: one column per generation of age: young, adult and old
 vancouver_trees <- vancouver_trees_oldyoung

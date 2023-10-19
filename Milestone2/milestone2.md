@@ -502,6 +502,9 @@ and “after”.
 
 <!--------------------------- Start your work below --------------------------->
 
+The idea is to add three columns, one for each category of age as the
+“untidyness” and then put it all back together.
+
 ``` r
 #I will use the pivot_longer function: one column per generation of age: young, adult and old
 vancouver_trees <- vancouver_trees_oldyoung
